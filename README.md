@@ -1,7 +1,8 @@
 # PyClicker
 This is a simple autoclicker that uses hotkeys to click. You can set the speed in milleseconds and it will click at that speed as long as you hold down the button.
+
 DIRECTIONS:
--Enter speed and hotkey
--Press "Start"
+* Enter speed and hotkey
+* Press "Start"
 
 In order to reset the hotkey and timing to enter them again, press "Reset", change the values, and press "Start"
