@@ -12,10 +12,10 @@ layout = [[sg.Text("Click Speed (ms):", size=(15, 1)), sg.InputText()],
           [sg.Button("Reset")]]
 window = sg.Window(title="PyClicker", layout=layout, margins=(35, 40))
 
-end = False
-
 
 def input_values():
+    global end
+    end = False
     while True:
         event, values = window.read()
 
@@ -39,9 +39,9 @@ def auto_click():
             time.sleep(interval)
 
 
-if not end:
-    interval, hotkey = input_values()
+interval, hotkey = input_values()
 
+if not end:
     clicker = threading.Thread(target=auto_click,  daemon=True)
     clicker.start()
 
